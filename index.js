@@ -13,7 +13,7 @@ selects.forEach((select, index) => {
         if (index === 1) {
             selected = countries[i]["name"] == "United States" ? "selected" : ""
         }
-        let option = `<option value=${countries[i]["currency"]} ${selected}>${countries[i]["name"]}</option>`
+        let option = `<option value=${countries[i]["currency"]} ${selected} data-country="${countries[i]["name"]}">${countries[i]["name"]}</option>`
         select.insertAdjacentHTML("beforeend", option);
     }
 });
@@ -22,8 +22,8 @@ let inputField = document.querySelector("#amount"),
     output = document.querySelector(".output");
 
 function getCurrency() {
-    selectedFrom = from.value;
-    selectedTO = to.value;
+    selectedFrom = selects[0].value;
+    selectedTO = selects[1].value;
     if (inputField.value === "" || inputField.value === "0") {
         inputField.value = 1;
     }
