@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;700&display=swap"
+        rel="stylesheet">
+    <title>Currency-Exchange</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>currency exchange</h1>
+        <form action="">
+            <label for="amount" class="amount">Amount
+                <input type="number" name="amount" id="amount" placeholder="Enter Amount" min="0">
+            </label>
+            <div class="fromTo">
+                <label for="from">From
+                    <select name="from" id="from" title="from"></select>
+                </label>
+                <button id="switch" title="switch" type="button"><i class="fa-solid fa-repeat"></i></button>
+                <label for="to">To
+                    <select name="to" id="to" title="to"></select>
+                </label>
+            </div>
+            <div class="output"></div>
+            <button type="button" value="convert" id="convert">convert</button>
+        </form>
+    </div>
+
+    <script src="country.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

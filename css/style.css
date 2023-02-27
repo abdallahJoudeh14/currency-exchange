@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: poppins,sans-serif;
+}
+body{
+    background-color: rgb(60, 120, 250);
+}
+.container{
+    padding: 45px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: aliceblue;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+.container h1{
+    margin: 0 0 40px 0;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 600;
+}
+.container form{
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+.container form #amount::-webkit-inner-spin-button{
+    display: none;
+}
+.container form :where(#amount , select){
+    display: block;
+    width: 100%;
+    height: 45px;
+    padding: 0 10px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    transition: all 0.3s;
+    outline: none;
+    margin-top: 10px;
+}
+.container form :where(#amount , #from , #to):focus{
+    border-color: rgb(60, 120, 250);
+    background-color: aliceblue;
+}
+.container form .fromTo{
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+}
+.container form .fromTo select{
+    display: block;
+    min-width: 100px;
+    max-width: 150px;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 14px;
+}
+.container form .fromTo select::-webkit-scrollbar{
+    width: 10px;
+    background-color: #fff;
+}
+
+.container form .fromTo select::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background-color: rgb(60, 120, 250);
+}
+
+.container form :where(#convert , #switch){
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    background-color: rgb(60, 120, 250);
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all 0.3s;
+    font-size: 19px;
+}
+.container form :where(#convert , #switch):hover{
+    background-color: rgb(37, 106, 255);
+    
+}
+
+#switch{
+    width: 45px;
+    margin: 0 10px;
+}
+select option{
+    background-color: #fff;
+}
